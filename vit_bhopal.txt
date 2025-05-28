@@ -1,0 +1,31 @@
+CREATE DATABASE vit_bhopal;
+
+use vit_bhopal;
+create table cse(
+s_id int,
+s_name varchar(40),
+s_mark int
+);
+create table IT(
+s_id int,
+s_name varchar(40),
+s_mark int
+);
+
+show tables from vit_bhopal;
+
+select * from cse;
+
+insert into cse values (101,'Aditya',98,'usa');
+
+desc cse;
+
+alter table cse add(
+	adress varchar(200)
+);
+alter table cse drop column adress;
+alter table cse add(
+	s_country varchar(200) default 'India'
+);
+update cse set s_mark=100 where s_id=101;
+update cse set s_mark = s_mark+100;
